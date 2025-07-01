@@ -801,7 +801,7 @@ def is_mobile():
 with st.sidebar:
     st.markdown("""
         <div style="text-align: center; padding: 20px;">
-            <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+            <img src="https://imgs.search.brave.com/yAdlDvzzyrV28LElmO7_OeufzV51AbKLP1NHzge1Liw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9tZWRp/Y2FsLXRlY2gtc2Np/ZW5jZS1haS1oZWFs/dGgtdGVjaG5vbG9n/eS1zdXJnaWNhbC1k/b2N0b3ItdGVsZWhl/YWx0aC10ZWxlbWVk/aWNpbmUtaW90LWds/b2JhbC1oZWFsdGhj/YXJlLXNlcnZpY2Ut/MjEwNDM0NzMyLmpw/Zw" 
                  class="feature-image" style="margin-bottom: 15px;">
             <h2 style="color: #667eea; font-family: 'Poppins', sans-serif; margin-bottom: 20px;">HealthCare AI</h2>
         </div>
@@ -907,7 +907,7 @@ st.markdown("""
 st.markdown("""
     <div class="feature-grid">
         <div class="feature-item">
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+            <img src="https://imgs.search.brave.com/K4qDPgMKk0cX2ePoxoOc0F4zLBctK0tqxkJ4ZRZFnIM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDcv/NjEzLzc0Ny9zbWFs/bC9haS1sZXR0ZXJz/LW9uLWRhcmstdGVj/aC1iYWNrZ3JvdW5k/LWNvbmNlcHQtb2Yt/YXJ0aWZpY2lhbC1p/bnRlbGxpZ2VuY2Ut/Y2lyY3VpdC1lbGVt/ZW50cy10ZWNobm9s/b2d5LXNjaWVuY2Ut/YW5kLWlubm92YXRp/b24tcGhvdG8uanBn" 
                  class="feature-image" alt="AI Analysis">
             <h4 style="color: #667eea; margin-top: 1rem;">🤖 AI Analysis</h4>
             <p style="font-size: 14px; color: #4a5568;">Advanced machine learning algorithms for accurate risk assessment</p>
