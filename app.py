@@ -199,6 +199,15 @@ st.markdown("""
         margin-bottom: 20px;
     }
 
+    /* Sidebar Styling */
+    .sidebar .card {
+        background: rgba(255,255,255,0.95);
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        animation: fadeInUp 0.6s ease-out;
+    }
+
     .footer {
         text-align: center;
         color: #666;
@@ -249,21 +258,34 @@ except Exception as e:
     st.error(f"❌ Error loading model or scaler: {e}")
     st.stop()
 
-# Sidebar with information
+# Sidebar with enhanced About section
 with st.sidebar:
-    st.image("https://via.placeholder.com/150x50?text=HealthCare+Logo", use_column_width=True)
-    st.markdown("### About This App")
+    st.markdown('<div class="card">', unsafe_allow_html=True)
+    st.image("https://via.placeholder.com/150x50?text=HealthCare+Logo", use_container_width=True)
+    st.markdown("### 🩺 About This App")
     st.markdown("""
-    This Diabetes Risk Assessment tool uses advanced machine learning to predict diabetes risk based on your health metrics.
-    - Clinically-inspired design
-    - Real-time risk assessment
-    - Secure and private
+    **Diabetes Risk Assessment** is a cutting-edge tool designed to help you understand your diabetes risk using advanced machine learning. Developed by Ashish Sharma, this app provides:
+    - **Accurate Predictions**: Powered by a robust ML model
+    - **User-Friendly Interface**: Intuitive and secure design
+    - **Healthcare Focus**: Aligned with medical standards
+    - **Instant Results**: Get insights in seconds
+    
+    **Disclaimer**: This tool is for informational purposes only. Always consult a healthcare professional for a comprehensive diagnosis.
     """)
-    st.markdown("**Note**: Always consult a healthcare professional for medical advice.")
+    st.markdown("#### Why Use This App?")
+    st.markdown("""
+    - Monitor your health proactively
+    - Understand key risk factors
+    - Take informed steps toward prevention
+    """)
+    st.markdown('<div style="text-align: center; margin-top: 20px;"><a href="https://x.ai" target="_blank">Powered by xAI</a></div>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # Main content
 st.title("🩺 Diabetes Risk Assessment by Ashish Sharma")
-st.image("https://images.pexels.com/photos/5473178/pexels-photo-5473178.jpeg", caption="Monitoring your health, one step at a time.", use_column_width=True)
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image("https://images.pexels.com/photos/5473178/pexels-photo-5473178.jpeg", caption="Monitoring your health, one step at a time.", width=300)
 st.markdown("Enter your health information below to assess your diabetes risk. All fields are required.")
 
 # Input form in card layout
