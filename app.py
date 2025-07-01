@@ -3,15 +3,15 @@ import numpy as np
 import joblib
 import time
 
-# Set page config
+# Set page config for better mobile experience
 st.set_page_config(
     page_title="🩺 Diabetes Risk Assessment by Ashish Sharma",
     page_icon="🩺",
-    layout="wide",
+    layout="wide",  # Wide layout works better on mobile
     initial_sidebar_state="expanded"
 )
 
-# Enhanced Custom CSS with images, animations, and lighting effects
+# Enhanced Custom CSS with complete mobile responsiveness
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -211,6 +211,7 @@ st.markdown("""
         font-size: 16px;
         transition: all 0.3s ease;
         backdrop-filter: blur(5px);
+        width: 100% !important;
     }
     
     .stNumberInput > div > div > input:focus {
@@ -242,7 +243,7 @@ st.markdown("""
         position: relative;
         overflow: hidden;
         transition: all 0.4s ease;
-        width: 100%;
+        width: 100% !important;
         text-transform: uppercase;
         box-shadow: 
             0 8px 25px rgba(102, 126, 234, 0.3),
@@ -475,30 +476,6 @@ st.markdown("""
         font-family: 'Inter', sans-serif;
     }
     
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        h1 { font-size: 2.5rem; }
-        .glass-card { padding: 1.5rem; margin: 1rem 0; }
-        .stButton > button { padding: 12px 30px; font-size: 16px; }
-        .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-        .feature-image { width: 60px; height: 60px; }
-    }
-    
-    /* Loading Animation */
-    .loading-spinner {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: 3px solid rgba(255,255,255,.3);
-        border-radius: 50%;
-        border-top-color: #fff;
-        animation: spin 1s ease-in-out infinite;
-    }
-    
-    @keyframes spin {
-        to { transform: rotate(360deg); }
-    }
-    
     /* Hero Image Container */
     .hero-container {
         position: relative;
@@ -529,6 +506,201 @@ st.markdown("""
     @keyframes overlayPulse {
         0%, 100% { background: linear-gradient(135deg, rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7)); }
         50% { background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)); }
+    }
+    
+    /* MOBILE RESPONSIVE STYLES */
+    @media only screen and (max-width: 768px) {
+        /* Container and Layout */
+        .element-container {
+            padding: 10px !important;
+        }
+        
+        .main .block-container {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            padding-top: 1rem !important;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 2.2rem !important;
+            line-height: 1.2 !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        h2 {
+            font-size: 1.8rem !important;
+            line-height: 1.3 !important;
+        }
+        
+        h3 {
+            font-size: 1.5rem !important;
+            line-height: 1.4 !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        h4 {
+            font-size: 1.2rem !important;
+            line-height: 1.4 !important;
+            margin-bottom: 0.8rem !important;
+        }
+        
+        p, div, span {
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+        }
+        
+        /* Glass Cards */
+        .glass-card {
+            padding: 1rem !important;
+            margin: 1rem 0 !important;
+            border-radius: 15px !important;
+        }
+        
+        /* Feature Grid */
+        .feature-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 1rem !important;
+            padding: 1rem !important;
+            margin: 1rem 0 !important;
+        }
+        
+        .feature-item {
+            padding: 1rem !important;
+        }
+        
+        .feature-image {
+            width: 60px !important;
+            height: 60px !important;
+        }
+        
+        /* Buttons */
+        .stButton > button {
+            padding: 12px 20px !important;
+            font-size: 16px !important;
+            width: 100% !important;
+            margin: 10px 0 !important;
+        }
+        
+        /* Form Elements */
+        .stNumberInput > div > div > input {
+            padding: 12px 15px !important;
+            font-size: 16px !important;
+            margin-bottom: 10px !important;
+        }
+        
+        .stNumberInput label {
+            font-size: 14px !important;
+            margin-bottom: 5px !important;
+        }
+        
+        /* Contact Info */
+        .contact-info {
+            padding: 1rem !important;
+        }
+        
+        .contact-item {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 5px !important;
+            margin: 0.5rem 0 !important;
+        }
+        
+        .contact-icon {
+            font-size: 16px !important;
+        }
+        
+        /* Result Cards */
+        .result-card {
+            padding: 1.5rem !important;
+            margin: 1rem 0 !important;
+        }
+        
+        /* Hero Section */
+        .hero-container img {
+            height: 200px !important;
+        }
+        
+        .hero-overlay h2 {
+            font-size: 1.8rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        
+        .hero-overlay p {
+            font-size: 1rem !important;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 1.5rem !important;
+        }
+        
+        .footer > div {
+            flex-direction: column !important;
+            gap: 1rem !important;
+        }
+        
+        /* Sidebar adjustments */
+        .css-1d391kg {
+            padding: 1rem !important;
+        }
+        
+        /* Metrics */
+        .metric-container {
+            margin: 0.5rem 0 !important;
+        }
+        
+        /* Progress bar */
+        .stProgress {
+            margin: 1rem 0 !important;
+        }
+        
+        /* Alert boxes */
+        .stAlert {
+            padding: 1rem !important;
+            margin: 1rem 0 !important;
+        }
+        
+        /* Spinner */
+        .stSpinner {
+            margin: 1rem 0 !important;
+        }
+    }
+    
+    /* TABLET RESPONSIVE STYLES */
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        h1 {
+            font-size: 2.8rem !important;
+        }
+        
+        .glass-card {
+            padding: 1.5rem !important;
+        }
+        
+        .feature-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 1.5rem !important;
+        }
+        
+        .stButton > button {
+            padding: 14px 30px !important;
+            font-size: 17px !important;
+        }
+    }
+    
+    /* Loading Animation */
+    .loading-spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(255,255,255,.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+        to { transform: rotate(360deg); }
     }
     </style>
     
@@ -585,6 +757,25 @@ st.markdown("""
             });
         });
     });
+    
+    // Mobile detection
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+    
+    // Adjust layout based on screen size
+    window.addEventListener('resize', function() {
+        if (isMobile()) {
+            document.body.classList.add('mobile-view');
+        } else {
+            document.body.classList.remove('mobile-view');
+        }
+    });
+    
+    // Initial check
+    if (isMobile()) {
+        document.body.classList.add('mobile-view');
+    }
     </script>
 """, unsafe_allow_html=True)
 
@@ -601,6 +792,10 @@ def load_models():
         st.stop()
 
 model, scaler = load_models()
+
+# Mobile detection function
+def is_mobile():
+    return st.session_state.get("is_mobile", False)
 
 # Enhanced Sidebar with Images and Updated Contact Info
 with st.sidebar:
@@ -631,7 +826,7 @@ with st.sidebar:
     
     ---
     
-    *⚠️ Medical Disclaimer:**  
+    **⚠️ Medical Disclaimer:**  
     This tool provides risk assessment only. Always consult healthcare professionals for medical decisions.
     """)
     st.markdown('</div>', unsafe_allow_html=True)
@@ -690,7 +885,7 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# Hero Image with enhanced overlay
+# Hero Image with enhanced overlay - responsive
 st.markdown("""
     <div class="hero-container">
         <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
@@ -708,11 +903,11 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# Feature Grid with 4 Small Images
+# Feature Grid with 4 Small Images - responsive
 st.markdown("""
     <div class="feature-grid">
         <div class="feature-item">
-            <img src="https://imgs.search.brave.com/K4qDPgMKk0cX2ePoxoOc0F4zLBctK0tqxkJ4ZRZFnIM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDcv/NjEzLzc0Ny9zbWFs/bC9haS1sZXR0ZXJz/LW9uLWRhcmstdGVj/aC1iYWNrZ3JvdW5k/LWNvbmNlcHQtb2Yt/YXJ0aWZpY2lhbC1p/bnRlbGxpZ2VuY2Ut/Y2lyY3VpdC1lbGVt/ZW50cy10ZWNobm9s/b2d5LXNjaWVuY2Ut/YW5kLWlubm92YXRp/b24tcGhvdG8uanBn" 
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
                  class="feature-image" alt="AI Analysis">
             <h4 style="color: #667eea; margin-top: 1rem;">🤖 AI Analysis</h4>
             <p style="font-size: 14px; color: #4a5568;">Advanced machine learning algorithms for accurate risk assessment</p>
@@ -752,85 +947,108 @@ st.markdown("""
 """)
 st.markdown('</div>', unsafe_allow_html=True)
 
-# Enhanced Input Form
+# Add spacing for mobile
+st.markdown("<br>", unsafe_allow_html=True)
+
+# Enhanced Input Form with responsive columns
 with st.form("diabetes_assessment_form", clear_on_submit=False):
     st.markdown('<div class="glass-card">', unsafe_allow_html=True)
     st.markdown("### 📊 Health Metrics Input")
     
-    col1, col2 = st.columns(2)
+    # Smart column usage - responsive
+    col1, col2 = st.columns([1, 1])
     
     with col1:
         st.markdown("#### 🏥 General Health")
-        preg = st.number_input(
-            "Number of Pregnancies", 
-            min_value=0, 
-            max_value=20, 
-            step=1, 
-            help="Total number of pregnancies (0 if male or never pregnant)"
-        )
         
-        glucose = st.number_input(
-            "Glucose Level (mg/dL)", 
-            min_value=0.0, 
-            max_value=300.0, 
-            step=0.1, 
-            help="Blood glucose concentration (Normal: 70-100 mg/dL fasting)"
-        )
+        # Add containers for better mobile spacing
+        with st.container():
+            preg = st.number_input(
+                "Number of Pregnancies", 
+                min_value=0, 
+                max_value=20, 
+                step=1, 
+                help="Total number of pregnancies (0 if male or never pregnant)"
+            )
+            st.markdown("---")
         
-        bp = st.number_input(
-            "Blood Pressure (mm Hg)", 
-            min_value=0.0, 
-            max_value=200.0, 
-            step=0.1, 
-            help="Diastolic blood pressure (Normal: 60-80 mm Hg)"
-        )
+        with st.container():
+            glucose = st.number_input(
+                "Glucose Level (mg/dL)", 
+                min_value=0.0, 
+                max_value=300.0, 
+                step=0.1, 
+                help="Blood glucose concentration (Normal: 70-100 mg/dL fasting)"
+            )
+            st.markdown("---")
         
-        skin = st.number_input(
-            "Skin Thickness (mm)", 
-            min_value=0.0, 
-            max_value=100.0, 
-            step=0.1, 
-            help="Triceps skin fold thickness (Normal: 10-25 mm)"
-        )
+        with st.container():
+            bp = st.number_input(
+                "Blood Pressure (mm Hg)", 
+                min_value=0.0, 
+                max_value=200.0, 
+                step=0.1, 
+                help="Diastolic blood pressure (Normal: 60-80 mm Hg)"
+            )
+            st.markdown("---")
+        
+        with st.container():
+            skin = st.number_input(
+                "Skin Thickness (mm)", 
+                min_value=0.0, 
+                max_value=100.0, 
+                step=0.1, 
+                help="Triceps skin fold thickness (Normal: 10-25 mm)"
+            )
     
     with col2:
         st.markdown("#### 🧬 Metabolic Profile")
-        insulin = st.number_input(
-            "Insulin Level (mu U/ml)", 
-            min_value=0.0, 
-            max_value=500.0, 
-            step=0.1, 
-            help="2-Hour serum insulin (Normal: 16-166 mu U/ml)"
-        )
         
-        bmi = st.number_input(
-            "Body Mass Index (BMI)", 
-            min_value=0.0, 
-            max_value=70.0, 
-            step=0.1, 
-            help="Weight in kg/(Height in m)² (Normal: 18.5-24.9)"
-        )
+        with st.container():
+            insulin = st.number_input(
+                "Insulin Level (mu U/ml)", 
+                min_value=0.0, 
+                max_value=500.0, 
+                step=0.1, 
+                help="2-Hour serum insulin (Normal: 16-166 mu U/ml)"
+            )
+            st.markdown("---")
         
-        dpf = st.number_input(
-            "Diabetes Pedigree Function", 
-            min_value=0.0, 
-            max_value=3.0, 
-            step=0.001, 
-            help="Genetic predisposition score (Higher = more family history)"
-        )
+        with st.container():
+            bmi = st.number_input(
+                "Body Mass Index (BMI)", 
+                min_value=0.0, 
+                max_value=70.0, 
+                step=0.1, 
+                help="Weight in kg/(Height in m)² (Normal: 18.5-24.9)"
+            )
+            st.markdown("---")
         
-        age = st.number_input(
-            "Age (years)", 
-            min_value=1, 
-            max_value=120, 
-            step=1, 
-            help="Current age in years"
-        )
+        with st.container():
+            dpf = st.number_input(
+                "Diabetes Pedigree Function", 
+                min_value=0.0, 
+                max_value=3.0, 
+                step=0.001, 
+                help="Genetic predisposition score (Higher = more family history)"
+            )
+            st.markdown("---")
+        
+        with st.container():
+            age = st.number_input(
+                "Age (years)", 
+                min_value=1, 
+                max_value=120, 
+                step=1, 
+                help="Current age in years"
+            )
     
     st.markdown('</div>', unsafe_allow_html=True)
     
-    # Enhanced Submit Button with Advanced Lighting
+    # Enhanced Submit Button with Advanced Lighting - responsive
     st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Use responsive button layout
     submit_col1, submit_col2, submit_col3 = st.columns([1, 2, 1])
     with submit_col2:
         submitted = st.form_submit_button("🔍 Analyze Diabetes Risk", use_container_width=True)
@@ -906,12 +1124,12 @@ if submitted:
                 prediction = model.predict(scaled_data)[0]
                 probability = model.predict_proba(scaled_data)[0]
                 
-                # Enhanced Results Display
+                # Enhanced Results Display - responsive
                 st.markdown('<div class="glass-card">', unsafe_allow_html=True)
                 st.markdown("### 📊 Risk Assessment Results")
                 
-                # Create two columns for results
-                result_col1, result_col2 = st.columns(2)
+                # Create responsive columns for results
+                result_col1, result_col2 = st.columns([1, 1])
                 
                 with result_col1:
                     if prediction == 1:
@@ -974,8 +1192,10 @@ if submitted:
                     else:
                         st.markdown("**✅ No major risk factors identified**")
                     
-                    # Health metrics summary
+                    # Health metrics summary - responsive
                     st.markdown("#### 📋 Your Health Summary")
+                    
+                    # Use responsive metrics layout
                     col_a, col_b = st.columns(2)
                     with col_a:
                         st.metric("Glucose", f"{glucose:.1f} mg/dL")
@@ -1055,7 +1275,7 @@ if submitted:
                 st.error(f"❌ **Analysis Error:** {str(e)}")
                 st.info("Please try again or contact support if the problem persists.")
 
-# Enhanced Footer
+# Enhanced Footer - responsive
 st.markdown("""
     <div class="footer">
         <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem;">
